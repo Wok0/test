@@ -47,7 +47,6 @@ class TicketSelect(Select):
             discord.SelectOption(label="Support", description="Problème technique"),
             discord.SelectOption(label="Commande", description="Question sur une commande"),
             discord.SelectOption(label="Autre", description="Autre demande"),
-            discord.SelectOption(label="Serveur", description="Demande d'accès au serveur"),
         ]
         super().__init__(placeholder="📩 Choisis le type de ticket...", min_values=1, max_values=1, options=options)
 
@@ -103,8 +102,7 @@ async def ticket(interaction: discord.Interaction):
         description="Choisis le type de ticket ci-dessous pour contacter le staff.\n\n"
                     "🛠️ **Support** — Problème technique\n"
                     "💰 **Commande** — Question ou achat\n"
-                    "💬 **Autre** — Toute autre demande"
-                    "👀 **Serveur** — Demande d'accès au serveur",
+                    "💬 **Autre** — Toute autre demande",
         color=discord.Color.blurple()
     )
 
@@ -114,4 +112,3 @@ async def ticket(interaction: discord.Interaction):
 
 
 bot.run(TOKEN)
-
